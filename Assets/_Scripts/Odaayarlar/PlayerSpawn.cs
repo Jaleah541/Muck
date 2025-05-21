@@ -16,7 +16,7 @@ public class PlayerSpawn : MonoBehaviourPunCallbacks
     }
 
     private void SpawnLocalPlayer()
-    {
+    { 
         int playerIndex = PhotonNetwork.LocalPlayer.ActorNumber - 1;
 
         // Pozisyon yeterliyse o pozisyonda spawn et

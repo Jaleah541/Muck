@@ -7,7 +7,7 @@ using TMPro;
 
 public class Movement : MonoBehaviourPunCallbacks
 {
-    private HaritaYapýcý HaritaYapýcý;
+    private HaritaOluþturucu HaritaOluþturucu;
     [Header("Bileþenler")]
     public Camera playerCamera;
     public FixedJoystick FixedJoystick;
@@ -52,7 +52,7 @@ public class Movement : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        HaritaYapýcý = FindObjectOfType<HaritaYapýcý>();
+        HaritaOluþturucu = FindObjectOfType<HaritaOluþturucu>();
         OyunucuAdý.text = photonView.Owner.NickName;
 
         rb = GetComponent<Rigidbody>();
@@ -74,7 +74,6 @@ public class Movement : MonoBehaviourPunCallbacks
 
     void ShowLocalUI(bool aktif)
     {
-        if (playerCamera) playerCamera.gameObject.SetActive(aktif);
         if (FixedJoystick) FixedJoystick.gameObject.SetActive(aktif);
         if (JumpButton) JumpButton.SetActive(aktif);
         if (PauseButton) PauseButton.SetActive(aktif);
@@ -92,11 +91,11 @@ public class Movement : MonoBehaviourPunCallbacks
             return; // Sadece baþkasýnýn karakteri için çýk
         }
 
-        if (HaritaYapýcý.BaþladýMý)
+        if (HaritaOluþturucu.BaþladýMý)
         {
             ShowLocalUI(true);
         }
-        else if (!HaritaYapýcý.BaþladýMý)
+        else if (!HaritaOluþturucu.BaþladýMý)
         {
             ShowLocalUI(false);
         }
