@@ -7,7 +7,7 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: toprak Terrain Layer
-  m_DiffuseTexture: {fileID: 2800000, guid: 66a65692e2bef2348851e2cca6f88620, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 09cc2baf874cb8a4faa1616e6672d8ac, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
